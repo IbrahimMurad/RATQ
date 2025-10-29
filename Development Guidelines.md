@@ -96,6 +96,7 @@ Semantic Search (Search by Meaning): The search will not be applied on the quran
 2. https://qul.tarteel.ai/resources/translation
 3. https://github.com/fawazahmed0/quran-api
 4. https://api-docs.quran.foundation/docs/content_apis_versioned/list-surah-translations
+5. [QuranEnc](https://quranenc.com/en/home)
 
 ### Tafsir
 You may also want to include Tafsir in your application.
