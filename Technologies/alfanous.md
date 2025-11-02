@@ -58,7 +58,7 @@ These return the same JSON structure as the console.
 
 > **Note**: The source code is written in Python 2.7 and it is not compatible with Python 3. You need to use a compatible version of Python 2.7.
 
-> **Note**: I tested the code after making many changes to the code to make it python3 compatible and didn't tested it with python2.
+> **Note**: I tested the code after making many changes to the code to make it python3 compatible and didn't test it with python2.
 
 1. clone the repository:
 
