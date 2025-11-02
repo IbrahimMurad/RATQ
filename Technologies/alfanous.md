@@ -86,8 +86,6 @@ make build
 
 5. Go to alfanous directory
 
-```bash
-cd src/alfanouse
 ```
 
 6. Setup the package:
