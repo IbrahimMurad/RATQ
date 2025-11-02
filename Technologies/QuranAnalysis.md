@@ -7,9 +7,7 @@
 4. [Core Components](#core-components)
 5. [Search Algorithm Explained](#search-algorithm-explained)
 6. [API Reference](#api-reference)
-7. [File Structure](#file-structure)
-8. [Contributing](#contributing)
-9. [Credits & License](#credits--license)
+7. [Credits & License](#credits--license)
 
 ---
 

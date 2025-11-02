@@ -31,7 +31,8 @@ The CDN allows quick integration with no need for hosting files.
 
 ```bash
 
-git clone git@github.com:risan/quran-json.git cd quran-json
+git clone git@github.com:risan/quran-json.git
+cd quran-json
 ```
 
 - Install dependencies: 

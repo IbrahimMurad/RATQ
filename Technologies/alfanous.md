@@ -439,11 +439,11 @@ endif
 ```
 
 2. The code is old and uses python2 syntax , so you need to make changes to make it work. For example :
-	1. Many `print` statements are using the old syntax.
-	2. In many places, the code uses an old method of dict `has_key()`, so you need to use the new syntax, `key in dict`.
-	3. It uses a deprecated data type `Encode`, so you need to change it to `str` if it is not already.
-	4. etc...
-		>> If you need all the changes I already done, you can use [my updated fork of the project](https://github.com/IbrahimMurad/alfanous).
+    1. Many `print` statements are using the old syntax.
+    2. In many places, the code uses an old method of dict `has_key()`, so you need to use the new syntax, `key in dict`.
+    3. It uses a deprecated data type `Encode`, so you need to change it to `str` if it is not already.
+    4. etc...
+        >> If you need all the changes I already done, you can use [my updated fork of the project](https://github.com/IbrahimMurad/alfanous).
 
 3. You need to install some required packages, `pyparsing`, `epydoc`, `sphinx`.
 

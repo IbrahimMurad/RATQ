@@ -47,7 +47,7 @@ The architecture of Quran.com search integrates both Elasticsearch and Kalimat t
 
 
 -  **Hybrid Architecture** 
-	  Elasticsearch handles rapid, full-text searches. Kalimat processes user queries for semantic understanding. The combined system sends semantic insights from Kalimat to enhance or refine the search query in Elasticsearch.
+      Elasticsearch handles rapid, full-text searches. Kalimat processes user queries for semantic understanding. The combined system sends semantic insights from Kalimat to enhance or refine the search query in Elasticsearch.
 - **Workflow**: When a user makes a search:
     1. Kalimat interprets the query to understand its context.
     2. The optimized or enriched query is sent to Elasticsearch.
