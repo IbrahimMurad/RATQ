@@ -1,6 +1,6 @@
-# 🏗️ Alfanous Build System Documentation
+# Alfanous Build System Documentation
 
-The **Alfanous build system** automates the process of constructing, indexing, and preparing Quranic linguistic data for the search engine. It uses a **GNU Makefile** that orchestrates resource downloading, database construction, index generation, and post-processing via Python scripts.
+The **[Alfanous](./alfanous.md) build system** automates the process of constructing, indexing, and preparing Quranic linguistic data for the search engine. It uses a **GNU Makefile** that orchestrates resource downloading, database construction, index generation, and post-processing via Python scripts.
 
 ---
 
