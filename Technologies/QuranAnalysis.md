@@ -1,6 +1,7 @@
 # Quran Analysis - Complete Documentation
 
 ## Table of Contents
+
 1. [Introduction](#introduction)
 2. [Project Overview](#project-overview)
 3. [System Architecture](#system-architecture)
@@ -22,7 +23,12 @@
 - **Multi-script Support**: Arabic (Simple/Uthmani) and English
 - **Visualization**: Interactive graphs and statistics
 
-### Key Features
+## Urls
+
+- Source code: [url](https://github.com/karimouda/qurananalysis/)
+- Web: [url](https://qurananalysis.com/)
+
+## Key Features
 
 - Full-text search with morphological expansion
 - Phrase search with exact matching
@@ -56,8 +62,8 @@ Quran Analysis started as an MSc project at the University of Leeds in 2015, sup
 
 ### External Resources
 
-1. **Tanzil Project**: Quran text (Simple/Uthmani), translations, transliteration
-2. **Quranic Arabic Corpus (QAC)**: Morphological annotations, POS tagging
+1. **[Tanzil Project](./tanzil.md)**: Quran text (Simple/Uthmani), translations, transliteration
+2. **[Quranic Arabic Corpus (QAC)](https://corpus.quran.com/)**: Morphological annotations, POS tagging
 3. **Qurana**: Pronominal anaphora resolution
 4. **WordNet**: English semantic dictionary
 5. **DBPedia**: Semantic structured data
@@ -131,6 +137,7 @@ Examples:
 **Purpose**: Foundation functions for the entire system
 
 **Key Functions**:
+
 - `loadModels()` - Loads and caches all data models
 - `getModelEntryFromMemory()` - Retrieves cached data from APC
 - `addValueToMemoryModel()` - Stores data in APC cache
@@ -140,6 +147,7 @@ Examples:
 - `buckwalterReverseTransliteration()` - Converts Buckwalter to Arabic
 
 **Features**:
+
 - Multilingual string operations
 - Unicode-safe character handling
 - Arabic text normalization
@@ -154,22 +162,26 @@ Examples:
 **Key Functions**:
 
 #### Query Expansion
+
 - `posTagUserQuery()` - Part-of-speech tagging for queries
 - `extendQueryWordsByDerivations()` - Adds plurals, singular forms
 - `extendQueryWordsByConceptTaxRelations()` - Adds related concepts from ontology
 - `extendQueryByExtractingQACDerviations()` - Extracts Arabic roots/stems
 
 #### Search & Ranking
+
 - `getScoredDocumentsFromInveretdIndex()` - Searches inverted index
 - `getSimilarWords()` - Finds similar words for suggestions
 - `getDistanceByCommonUniqueChars()` - Secondary similarity metric
 
 #### Results Processing
+
 - `printResultVerses()` - Renders search results with highlighting
 - `getStatsByScoringTable()` - Generates search statistics
 - `searchResultsToWordcloud()` - Creates word cloud from results
 
 **Scoring Formula**:
+
 ```php
 SCORE = (FREQ / 2) +                    // Term frequency
         (DISTANCE * 1) +                // Word proximity
@@ -186,6 +198,7 @@ SCORE = (FREQ / 2) +                    // Term frequency
 **Purpose**: Answers questions about Quran content
 
 **Key Functions**:
+
 - `answerUserQuestion()` - Main QA orchestrator
 - `containsQuestionWords()` - Detects question type
 - `removeQuestionCluesFromArr()` - Cleans query for search
@@ -200,6 +213,7 @@ SCORE = (FREQ / 2) +                    // Term frequency
 | how long | -                   | Time     |
 
 **QA Process**:
+
 1. Detect question type (who, what, etc.)
 2. Extract question concepts
 3. Find related concepts in ontology
@@ -238,6 +252,7 @@ Metadata:
 ```
 
 **Key Functions**:
+
 - `buildRelationHashID()` - Creates unique relation identifier
 - `stripOntologyNamespace()` - Cleans OWL namespaces
 - `cleanWordnetCollocation()` - Normalizes WordNet phrases
@@ -249,11 +264,13 @@ Metadata:
 **Purpose**: Generates D3.js visualizations
 
 **Key Functions**:
+
 - `ontologyTextToD3Graph()` - Creates knowledge graphs from search results
 - `createNewConceptObj()` - Builds graph nodes
 - `formatEnglishConcept()` - Formats concept labels
 
 **Visualization Types**:
+
 1. **Force-directed graph**: Concepts and relationships
 2. **Hierarchical treemap**: Concept taxonomy
 3. **Word clouds**: Term frequency visualization
@@ -268,6 +285,7 @@ Metadata:
 **Based on**: PHPIR library with Brown Corpus lexicon
 
 **Tags Used**:
+
 - `NN` - Noun, singular
 - `NNS` - Noun, plural
 - `VB` - Verb, base form
@@ -276,6 +294,7 @@ Metadata:
 - `JJ` - Adjective
 
 **Process**:
+
 1. Tokenize query
 2. Look up each word in lexicon
 3. Apply transformation rules
@@ -288,6 +307,7 @@ Metadata:
 ### **Architecture Overview**
 
 This is a **semantic search engine** with:
+
 - **Inverted Index** for fast lookups
 - **QAC (Quranic Arabic Corpus)** integration for morphological analysis
 - **Ontology-based** query expansion
@@ -299,7 +319,9 @@ This is a **semantic search engine** with:
 ### Core Data Structures
 
 ### 1. Memory Model (APC Cache)
+
 Everything is stored in APC (Alternative PHP Cache) with hierarchical keys:
+
 ```
 {LANG}/MODEL/{MODEL_TYPE}/{KEY}/{ENTRY}
 
@@ -311,6 +333,7 @@ Examples:
 ```
 
 ### 2. Inverted Index Structure
+
 ```php
 INVERTED_INDEX[word] = [
     [
@@ -326,6 +349,7 @@ INVERTED_INDEX[word] = [
 ```
 
 ### 3. QAC Master Table
+
 ```php
 QAC_MASTERTABLE[sura:aya:word] = [
     segment_index => [
@@ -342,6 +366,7 @@ QAC_MASTERTABLE[sura:aya:word] = [
 ```
 
 ### 4. Ontology Structure
+
 ```php
 CONCEPTS[concept_id] = [
     'label_ar' => 'حيوان',
@@ -370,11 +395,13 @@ GRAPH_INDEX_TARGETS[concept] = [ all relations where concept is target ]
 ### Phase 1: Query Analysis (`query.handling.common.php`)
 
 #### 1.1 Language Detection
+
 ```php
 isArabicString($query) → sets $lang = "AR" or "EN"
 ```
 
 #### 1.2 Search Type Detection
+
 ```php
 - Phrase: Contains quotes "exact phrase"
 - Question: Contains ? or question words (who, what, من, ما)
@@ -385,6 +412,7 @@ isArabicString($query) → sets $lang = "AR" or "EN"
 ```
 
 #### 1.3 Query Cleaning
+
 ```php
 For Arabic:
 1. convertUthamniQueryToSimple() - removes diacritics
@@ -403,6 +431,7 @@ For English:
 This is where the **magic** happens - turning a simple query into a comprehensive search.
 
 #### 2.1 POS Tagging (`posTagUserQuery`)
+
 ```php
 For English:
 - Uses PHPIR lexicon-based tagger
@@ -417,6 +446,7 @@ For Arabic:
 #### 2.2 Derivation Expansion (`extendQueryWordsByDerivations`)
 
 **English Derivations:**
+
 ```php
 Input: "book"
 Process:
@@ -427,6 +457,7 @@ Output: ["book", "books"]
 ```
 
 **Arabic Derivations (Complex!):**
+
 ```php
 Input: "حيوان" (animal)
 
@@ -448,6 +479,7 @@ Output: ["حيوان", "حيوانات", "الحيوان", "الحيوانات"]
 ```
 
 **Pattern Recognition:**
+
 ```php
 getStringDiff($word1, $word2) determines:
 - "ات" = plural suffix
@@ -462,6 +494,7 @@ Diff = "الات" → valid plural derivation
 #### 2.3 Ontology Extension (`extendQueryWordsByConceptTaxRelations`)
 
 **IS-A Relations (Taxonomy):**
+
 ```php
 Input: "horse"
 
@@ -477,6 +510,7 @@ Output: ["horse", "mare", "stallion", "animal", "mammal"]
 ```
 
 **For Questions - Verb Relations:**
+
 ```php
 Input: "who created man?"
 Query terms: ["create", "man"]
@@ -491,6 +525,7 @@ Output: ["create", "man", "Allah", "earth"]
 ```
 
 **Synonym Expansion:**
+
 ```php
 SYNONYMS_INDEX["righteous"] = "صالح"
 
@@ -523,6 +558,7 @@ Output: ["كتاب", "كتب", "كِتَاب", "يكتب", "كاتب", ...]
 ```
 
 **Uthmani ↔ Simple Mapping:**
+
 ```php
 // Uthmani (with diacritics) → Simple (without)
 UTHMANI_TO_SIMPLE_WORD_MAP["ٱلْكِتَٰبِ"] = "الكتاب"
@@ -535,6 +571,7 @@ UTHMANI_TO_SIMPLE_WORD_MAP["ٱلْكِتَٰبِ"] = "الكتاب"
 ### Phase 3: Index Search (`getScoredDocumentsFromInveretdIndex`)
 
 #### 3.1 Column Search (Chapter/Verse)
+
 ```php
 If searching for "2:255":
 - Directly return that verse with SCORE=1
@@ -542,21 +579,22 @@ If searching for "2:255":
 ```
 
 #### 3.2 Inverted Index Lookup
+
 ```php
 For each word in extendedQueryWordsArr:
-    
+
     1. Fetch from index:
        invertedIndexEntry = INVERTED_INDEX[word]
-    
+
     2. For each document (verse) containing word:
        - Extract: SURA, AYA, WORD_INDEX, WORD_TYPE
-       
+
     3. Phrase search check:
        if isPhraseSearch:
            - Use regex: "/(^|[ ])$query([ ]|\$)/umi"
            - Only keep if FULL query matches
            - Skip if not found
-       
+
     4. Initialize scoring entry:
        scoringTable[SURA:AYA] = {
            SCORE: 0,
@@ -571,22 +609,24 @@ For each word in extendedQueryWordsArr:
 ```
 
 #### 3.3 Word Type Handling
+
 ```php
 If WORD_TYPE == "PRONOUN_ANTECEDENT":
     // Mark pronoun location
     scoringTable[verse]['PRONOUNS'][pronoun_text] = word_index
-    
+
 If WORD_TYPE == "ROOT" or "LEM":
     // Add segment form + converted simple form
     segment_word = getItemFromUthmaniToSimpleMappingTable(EXTRA_INFO)
     scoringTable[verse]['POSSIBLE_HIGHLIGHTABLE_WORDS'][segment_word] = type
-    
+
 If WORD_TYPE == "NORMAL_WORD":
     // Add exact word
     scoringTable[verse]['POSSIBLE_HIGHLIGHTABLE_WORDS'][word] = type
 ```
 
 #### 3.4 Scoring Calculation
+
 ```php
 SCORE = (FREQ / 2) +                    // Term frequency (low weight)
         (DISTANCE * 1) +                // Word proximity
@@ -597,6 +637,7 @@ SCORE = (FREQ / 2) +                    // Term frequency (low weight)
 ```
 
 **Why this scoring?**
+
 - **Exact phrases get 20 points** - highest priority
 - **More query terms = 10 points each** - diversity matters
 - **Term frequency = 0.5 points** - prevents spam from high-frequency words
@@ -608,6 +649,7 @@ SCORE = (FREQ / 2) +                    // Term frequency (low weight)
 **For questions only:**
 
 #### 4.1 Extract Question Type
+
 ```php
 containsQuestionWords("who created man?", "EN")
 → Returns "Person"
@@ -620,6 +662,7 @@ Question types:
 ```
 
 #### 4.2 Get Question Type Concepts
+
 ```php
 questionType = "Person"
 conceptID = "person" (from ontology)
@@ -633,23 +676,25 @@ questionTypeConceptsArr = ["Adam", "Moses", "Noah", ...]
 ```
 
 #### 4.3 Score Answer Candidates
+
 ```php
 For each verse in results:
-    
+
     1. Extract concepts from verse text
     2. Calculate similarity factors:
-    
+
     COMMON_CONCEPTS = intersection(question_concepts, verse_concepts) * 10
     COMMON_QUESTION_TYPE = intersection(question_type_concepts, verse_concepts) * 10
     COMMON_ROOTS = intersection(question_roots, verse_roots) * 10
     COMMON_DERIVATIONS = shared_word_substrings * 10
-    
+
     3. Update score:
-    SCORE += COMMON_CONCEPTS + COMMON_QUESTION_TYPE + 
+    SCORE += COMMON_CONCEPTS + COMMON_QUESTION_TYPE +
              COMMON_ROOTS + COMMON_DERIVATIONS
 ```
 
 #### 4.4 Return Top Answers
+
 ```php
 // Sort by new scores
 rsortBy($scoredAnswers, 'SCORE')
@@ -663,6 +708,7 @@ return array_slice($scoredAnswers, 0, 3)
 ### Phase 5: Similarity Metrics (`core.lib.php`)
 
 #### 5.1 Levenshtein Distance (`myLevensteinEditDistance`)
+
 ```php
 // Classic dynamic programming algorithm
 // Multilingual support (uses mb_substr)
@@ -683,6 +729,7 @@ Distance = 1 (one deletion)
 ```
 
 #### 5.2 Common Unique Characters (`getDistanceByCommonUniqueChars`)
+
 ```php
 word1 = "كتاب"
 word2 = "كتابة"
@@ -698,14 +745,15 @@ score = 4 (common chars)
 ```
 
 #### 5.3 Combined Similarity (`getSimilarWords`)
+
 ```php
 For each word in corpus:
     if abs(len(word) - len(query)) <= 3:
         edit_dist = getDistanceBetweenWords(word, query)
-        
+
         if edit_dist <= 3:
             similarity = (1/edit_dist) + commonUniqueChars(word, query)
-            
+
 // Sort by similarity (descending)
 // Return top matches
 ```
@@ -715,21 +763,23 @@ For each word in corpus:
 ### Phase 6: Result Processing
 
 #### 6.1 Highlighting (`printResultVerses`)
+
 ```php
 For each verse:
     1. Mark query words:
        $TEXT = preg_replace("/(word1|word2)/", "<marked>\\1</marked>", $TEXT)
-    
+
     2. Mark pronouns:
        For each pronoun:
            markSpecificWordInText($TEXT, pronoun_index, pronoun_text, "marked")
-    
+
     3. Mark prospect answers (for questions):
        For each significant_collocation_word:
            markWordWithoutWordIndex($TEXT, word, "marked_prospect_answer")
 ```
 
 #### 6.2 Statistics (`getStatsByScoringTable`)
+
 ```php
 uniqueSuras = count(unique sura IDs)
 uniqueVerses = count(unique sura:aya pairs)
@@ -743,6 +793,7 @@ return [
 ```
 
 #### 6.3 Word Cloud (`searchResultsToWordcloud`)
+
 ```php
 For each verse in results:
     words = split(verse)
@@ -759,15 +810,17 @@ For each verse in results:
 ### Advanced Features
 
 #### 1. Transliteration Search
+
 ```php
 If English + not question + word in TRANSLITERATION_WORDS_INDEX:
     isTransliterationSearch = true
-    
+
     // Search phonetic Arabic
     // e.g., "bismillah" → finds "بسم الله"
 ```
 
 #### 2. Buckwalter Transliteration
+
 ```php
 // Arabic ↔ ASCII encoding for QAC
 arabicToBuckwalter("الْكِتَابِ")
@@ -778,6 +831,7 @@ buckwalterReverseTransliteration("AlkitAbi")
 ```
 
 #### 3. Script Conversion
+
 ```php
 shallowUthmaniToSimpleConversion():
     1. Remove all diacritics
@@ -788,6 +842,7 @@ shallowUthmaniToSimpleConversion():
 ```
 
 #### 4. Pause Mark Handling
+
 ```php
 // Arabic Quran has pause marks: ۗ ۚ ۘ
 removePauseMarkFromVerse():
@@ -800,6 +855,7 @@ removePauseMarkFromVerse():
 ### Performance Optimizations
 
 #### 1. APC Caching
+
 ```php
 // All models cached in memory
 // No file I/O during search
@@ -807,6 +863,7 @@ removePauseMarkFromVerse():
 ```
 
 #### 2. Query Limiting
+
 ```php
 // Max 25 extended query words
 if count($extendedQuery) > 25:
@@ -814,6 +871,7 @@ if count($extendedQuery) > 25:
 ```
 
 #### 3. Concept Limiting
+
 ```php
 // For Arabic derivations
 // Max 10 derived forms
@@ -821,6 +879,7 @@ $taggedSignificantWords = array_slice($words, 0, 10)
 ```
 
 #### 4. Early Termination
+
 ```php
 // For word info lookup with fast=true
 if $fast && !empty($versesArr):
@@ -831,14 +890,14 @@ if $fast && !empty($versesArr):
 
 ### Key Algorithms Summary
 
-| Algorithm | Purpose | Complexity |
-|-----------|---------|------------|
-| Levenshtein Distance | Typo correction | O(m×n) |
-| Common Unique Chars | Fast similarity | O(m+n) |
-| POS Tagging | English syntax | O(n) |
-| Ontology Traversal | Semantic expansion | O(relations) |
-| Inverted Index Lookup | Fast search | O(1) average |
-| Dynamic Scoring | Relevance ranking | O(results) |
+| Algorithm             | Purpose            | Complexity   |
+| --------------------- | ------------------ | ------------ |
+| Levenshtein Distance  | Typo correction    | O(m×n)       |
+| Common Unique Chars   | Fast similarity    | O(m+n)       |
+| POS Tagging           | English syntax     | O(n)         |
+| Ontology Traversal    | Semantic expansion | O(relations) |
+| Inverted Index Lookup | Fast search        | O(1) average |
+| Dynamic Scoring       | Relevance ranking  | O(results)   |
 
 ---
 
@@ -885,12 +944,14 @@ Display Results
 **Method**: GET
 
 **Parameters**:
+
 ```
 q       - Query string (required)
 script  - Display script: 'simple' or 'uthmani' (optional, default: simple)
 ```
 
 **Example**:
+
 ```
 GET /search/dosearch.ajax.service.php?q=محمد&script=uthmani
 ```
@@ -906,11 +967,13 @@ GET /search/dosearch.ajax.service.php?q=محمد&script=uthmani
 **Method**: GET
 
 **Parameters**:
+
 ```
 q - Query string (required)
 ```
 
 **Example**:
+
 ```
 GET /search/index.php?q=Muhammad
 ```
@@ -922,22 +985,26 @@ GET /search/index.php?q=Muhammad
 ### Query Modifiers
 
 **Phrase Search**:
+
 ```
 q="exact phrase"
 ```
 
 **Chapter Search**:
+
 ```
 q=2          (entire chapter 2)
 q=2:255      (chapter 2, verse 255)
 ```
 
 **Concept Search**:
+
 ```
 q=CONCEPTSEARCH:animal
 ```
 
 **Constraints**:
+
 ```
 q=muhammad CONSTRAINT:NODERIVATION
 q=muhammad CONSTRAINT:NOEXTENTIONFROMONTOLOGY
@@ -950,6 +1017,7 @@ q=muhammad CONSTRAINT:NOEXTENTIONFROMONTOLOGY
 ### Main Author
 
 **Karim Ouda**
+
 - MSc Project, University of Leeds (2015)
 - Supervisor: Eric Atwell
 - Email: [Contact via website]
@@ -979,5 +1047,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 ```
 
 **Commercial Use**: Quran Analysis code, framework, and corpora can be used in websites or applications (commercial/non-commercial) provided that the developer:
+
 - Link back to www.qurananalysis.com
 - Give sufficient credits

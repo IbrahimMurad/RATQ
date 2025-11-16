@@ -86,13 +86,13 @@ make build
 
 5. Go to alfanous directory
 
-```
+````
 
 6. Setup the package:
 
 ```bash
 python3 setup.py install
-```
+````
 
 Now, you can use `alfanous-console` command to search for a word or phrase.
 
@@ -109,7 +109,7 @@ http://alfanous.org/jos2?action=search&query=Allh
 
 will perform a search and return JSON.
 
-> **Note**: The web API is available online but it seems that it has some issues, many requests get exceeding limit error, and I am not sure why. Also, it does have some inconvenient responses, so its can not count on these responses. 
+> **Note**: The web API is available online but it seems that it has some issues, many requests get exceeding limit error, and I am not sure why. Also, it does have some inconvenient responses, so its can not count on these responses.
 
 **Query Flags and Parameters for the Web API**
 
@@ -437,11 +437,12 @@ endif
 ```
 
 2. The code is old and uses python2 syntax , so you need to make changes to make it work. For example :
-    1. Many `print` statements are using the old syntax.
-    2. In many places, the code uses an old method of dict `has_key()`, so you need to use the new syntax, `key in dict`.
-    3. It uses a deprecated data type `Encode`, so you need to change it to `str` if it is not already.
-    4. etc...
-        >> If you need all the changes I already done, you can use [my updated fork of the project](https://github.com/IbrahimMurad/alfanous).
+
+   1. Many `print` statements are using the old syntax.
+   2. In many places, the code uses an old method of dict `has_key()`, so you need to use the new syntax, `key in dict`.
+   3. It uses a deprecated data type `Encode`, so you need to change it to `str` if it is not already.
+   4. etc...
+      > If you need all the changes I already done, you can use [my updated fork of the project](https://github.com/IbrahimMurad/alfanous).
 
 3. You need to install some required packages, `pyparsing`, `epydoc`, `sphinx`.
 
@@ -456,6 +457,11 @@ pip3 install pyparsing epydoc sphinx
 ```python
 from html import escape as htmlescape
 ```
+
+## Resources
+
+- [Tanzil](./tanzil.md): for Quran text, and translations.
+- [QuranCorpus](https://corpus.quran.com/): for Quranic corpus.
 
 ## [License](#table-of-contents)
 

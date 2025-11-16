@@ -12,7 +12,7 @@
 # These are main components of the projects
 ### [Development Roadmap](./Development%20Guidelines.md) Your guide to develop Quran apps
 ### [Available Apps](./Available%20Apps.md) List of available Quran apps, might help you find inspiration
-### [Technologies](./Technologies.md) List of technologies that can be used in Quran apps
+### [Technologies](./Technologies/Technologies.md) List of technologies that can be used in Quran apps
 
 ### This is a living document, please contribute if you know of any resources that are not listed here. Or if you find any errors.
 
