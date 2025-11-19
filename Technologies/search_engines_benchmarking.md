@@ -177,7 +177,7 @@ It covers the used queries to evaluate the performance of the four search engine
 
 - It returned the following results:
 
-![kalimat-3akl-results](./assets/kalimat-3akl-results.png)
+![kalimat-aql-results](./assets/kalimat-aql-results.png)
 
 <h4 dir="ltr">"ألباب"</h4>
 
