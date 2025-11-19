@@ -95,6 +95,7 @@ It covers the used queries to evaluate the performance of the four search engine
 <h4 dir="ltr">"ربوة"</h4>
 
 - It returned the following results:
+
 ![alfanous-rabwa-results](./assets/alfanous-rabwa-results.png)
 
 ![alfanous-rabwa-result-1](./assets/alfanous-rabwa-result1.png)
@@ -117,6 +118,7 @@ It covers the used queries to evaluate the performance of the four search engine
 <h4 dir="ltr">"جمل"</h4>
 
 - It returned the following results:
+
 ![alfanous-gamal-results](./assets/alfanous-gamal-results.png)
 
 ![alfanous-gamal-result-1](./assets/alfanous-gamal-result1.png)
@@ -124,11 +126,13 @@ It covers the used queries to evaluate the performance of the four search engine
 <h4 dir="ltr">"عصفور"</h4>
 
 - It returned the following results:
+
 ![alfanous-asfor-results](./assets/alfanous-asfor-results.png)
 
 <h4 dir="ltr">"طير"</h4>
 
 - It returned the following results:
+
 ![alfanous-tyr-results](./assets/alfanous-tyr-results.png)
 
 ![alfanous-tyr-result-1](./assets/alfanous-tyr-result1.png)
@@ -140,6 +144,7 @@ It covers the used queries to evaluate the performance of the four search engine
 <h4 dir="ltr">"غراب"</h4>
 
 - It returned the following results:
+
 ![alfanous-ghorab-results](./assets/alfanous-ghorab-results.png)
 
 ![alfanous-ghorab-result-1](./assets/alfanous-ghorab-result1.png)
@@ -148,6 +153,7 @@ It covers the used queries to evaluate the performance of the four search engine
 <h4 dir="ltr">"هدهد"</h4>
 
 - It returned the following results:
+
 ![alfanous-hdhd-results](./assets/alfanous-hdhd-results.png)
 
 ![alfanous-hdhd-result1](./assets/alfanous-hdhd-result1.png)
@@ -158,71 +164,85 @@ It covers the used queries to evaluate the performance of the four search engine
 <h4 dir="ltr">"عرب"</h4>
 
 - It returned the following results:
+
 ![kalimat-arab-results](./assets/kalimat-arab-results.png)
 
 <h4 dir="ltr">"صلوة"</h4>
 
 - It returned the following results:
+
 ![kalimat-salat-results](./assets/kalimat-salat-results.png)
 
 <h4 dir="ltr">"عقل"</h4>
 
 - It returned the following results:
+
 ![kalimat-3akl-results](./assets/kalimat-3akl-results.png)
 
 <h4 dir="ltr">"ألباب"</h4>
 
 - It returned the following results:
+
 ![kalimat-albab-results](./assets/kalimat-albab-results.png)
 
 <h4 dir="ltr">"تل"</h4>
 
 - It returned the following results:
+
 ![kalimat-tal-results](./assets/kalimat-tal-results.png)
 
 <h4 dir="ltr">"جبل"</h4>
 
 - It returned the following results:
+
 ![kalimat-jbl-results](./assets/kalimat-jbl-results.png)
 
 <h4 dir="ltr">"ربوة"</h4>
 
 - It returned the following results:
+
 ![kalimat-rbw-results](./assets/kalimat-rbw-results.png)
 
 <h4 dir="ltr">"النيل"</h4>
 
 - It returned the following results:
+
 ![kalimat-nil-results](./assets/kalimat-nil-results.png)
 
 <h4 dir="ltr">"بحر"</h4>
 
 - It returned the following results:
+
 ![kalimat-bhr-results](./assets/kalimat-bhr-results.png)
 
 <h4 dir="ltr">"جمل"</h4>
 
 - It returned the following results:
+
 ![kalimat-jm-results](./assets/kalimat-jm-results.png)
 
 <h4 dir="ltr">"عصفور"</h4>
 
 - It returned the following results:
+
 ![kalimat-3sfwr-results](./assets/kalimat-3sfwr-results.png)
 
 <h4 dir="ltr">"طير"</h4>
 
 - It returned the following results:
+
 ![kalimat-tyr-results](./assets/kalimat-tyr-results.png)
 
 <h4 dir="ltr">"غراب"</h4>
 
 - It returned the following results:
+
 ![kalimat-grb-results](./assets/kalimat-grb-results.png)
 
 <h4 dir="ltr">"هدهد"</h4>
 
 - It returned the following results:
+
 ![kalimat-hdhd-results](./assets/kalimat-hdhd-results.png)
 
 ### quranic
@@ -312,71 +332,85 @@ Surah Al-Isra’ (the Night Journey)
 <h4 dir="ltr">"عرب"</h4>
 
 - It returned the following results:
+
 ![qa-arab-results](./assets/qa-arab-results.png)
 
 <h4 dir="ltr">"صلوة"</h4>
 
 - It returned the following results:
+
 ![qa-salat-results](./assets/qa-salat-results.png)
 
 <h4 dir="ltr">"عقل"</h4>
 
 - It returned the following results:
+
 ![qa-3ql-results](./assets/qa-3ql-results.png)
 
 <h4 dir="ltr">"ألباب"</h4>
 
 - It returned the following results:
+
 ![qa-albab-results](./assets/qa-albab-results.png)
 
 <h4 dir="ltr">"تل"</h4>
 
 - It returned the following results:
+
 ![qa-tal-results](./assets/qa-tal-results.png)
 
 <h4 dir="ltr">"جبل"</h4>
 
 - It returned the following results:
+
 ![qa-jbl-results](./assets/qa-jbl-results.png)
 
 <h4 dir="ltr">"ربوة"</h4>
 
 - It returned the following results:
+
 ![qa-rbw-results](./assets/qa-rbw-results.png)
 
 <h4 dir="ltr">"النيل"</h4>
 
 - It returned the following results:
+
 ![qa-nil-results](./assets/qa-nil-results.png)
 
 <h4 dir="ltr">"بحر"</h4>
 
 - It returned the following results:
+
 ![qa-bhr-results](./assets/qa-bhr-results.png)
 
 <h4 dir="ltr">"جمل"</h4>
 
 - It returned the following results:
+
 ![qa-gamal-results](./assets/qa-gamal-results.png)
 
 <h4 dir="ltr">"عصفور"</h4>
 
 - It returned the following results:
+
 ![qa-asfor-results](./assets/qa-asfor-results.png)
 
 <h4 dir="ltr">"طير"</h4>
 
 - It returned the following results:
+
 ![qa-tyr-results](./assets/qa-tyr-results.png)
 
 <h4 dir="ltr">"غراب"</h4>
 
 - It returned the following results:
+
 ![qa-ghorab-results](./assets/qa-ghorab-results.png)
 
 <h4 dir="ltr">"هدهد"</h4>
 
 - It returned the following results:
+
 ![qa-hdhd-results](./assets/qa-hdhd-results.png)
 
 
@@ -388,69 +422,83 @@ Surah Al-Isra’ (the Night Journey)
 <h4 dir="ltr">"عرب"</h4>
 
 - It returned the following results:
+
 ![sev2-arab-results](./assets/sev2-arab-results.png)
 
 <h4 dir="ltr">"صلوة"</h4>
 
 - It returned the following results:
+
 ![sev2-salat-results](./assets/sev2-salat-results.png)
 
 <h4 dir="ltr">"عقل"</h4>
 
 - It returned the following results:
+
 ![sev2-aql-results](./assets/sev2-aql-results.png)
 
 <h4 dir="ltr">"ألباب"</h4>
 
 - It returned the following results:
+
 ![sev2-albab-results](./assets/sev2-albab-results.png)
 
 <h4 dir="ltr">"تل"</h4>
 
 - It returned the following results:
+
 ![sev2-tal-results](./assets/sev2-tal-results.png)
 
 <h4 dir="ltr">"جبل"</h4>
 
 - It returned the following results:
+
 ![sev2-jbl-results](./assets/sev2-jbl-results.png)
 
 <h4 dir="ltr">"ربوة"</h4>
 
 - It returned the following results:
+
 ![sev2-rabwa-results](./assets/sev2-rabwa-results.png)
 
 <h4 dir="ltr">"النيل"</h4>
 
 - It returned the following results:
+
 ![sev2-nile-results](./assets/sev2-nile-results.png)
 
 <h4 dir="ltr">"بحر"</h4>
 
 - It returned the following results:
+
 ![sev2-bhr-results](./assets/sev2-bhr-results.png)
 
 <h4 dir="ltr">"جمل"</h4>
 
 - It returned the following results:
+
 ![sev2-gamal-results](./assets/sev2-gamal-results.png)
 
 <h4 dir="ltr">"عصفور"</h4>
 
 - It returned the following results:
+
 ![sev2-asfor-results](./assets/sev2-asfor-results.png)
 
 <h4 dir="ltr">"طير"</h4>
 
 - It returned the following results:
+
 ![sev2-tyr-results](./assets/sev2-tyr-results.png)
 
 <h4 dir="ltr">"غراب"</h4>
 
 - It returned the following results:
+
 ![sev2-ghorab-results](./assets/sev2-ghorab-results.png)
 
 <h4 dir="ltr">"هدهد"</h4>
 
 - It returned the following results:
+
 ![sev2-hdhd-results](./assets/sev2-hdhd-results.png)
